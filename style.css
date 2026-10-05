@@ -115,10 +115,10 @@ body {
 .activity-card {
     position: relative;
 
-    /* 防止頂部裝飾線超出圓角 */
+    /* 防止上方裝飾線超出圓角 */
     overflow: hidden;
 
-    /* 兩張卡片平均分配空間 */
+    /* 兩張卡片平均分配寬度 */
     flex: 1;
 
     display: flex;
@@ -127,23 +127,23 @@ body {
 
     padding: 46px 32px 36px;
 
-    /* 大圓角 */
+    /* 卡片圓角 */
     border-radius: 24px;
 
-    /* 淡藍灰色邊框 */
-    border: 1px solid #d7e3e8;
+    /* 淡橘色邊框 */
+    border: 1px solid #f0d7ce;
 
-    /* 兩張卡片使用完全相同的霧藍背景 */
+    /* 非常淡的暖橘背景 */
     background:
         linear-gradient(
             145deg,
             #ffffff 0%,
-            #f3f8fa 100%
+            #fff4ef 100%
         );
 
     /* 柔和陰影 */
     box-shadow:
-        0 10px 30px rgba(38, 75, 91, 0.10);
+        0 10px 30px rgba(166, 91, 61, 0.10);
 
     transition:
         transform 0.3s ease,
@@ -152,7 +152,7 @@ body {
 
 
 /* =========================
-   卡片頂部裝飾線
+   卡片頂部橘色裝飾線
 ========================= */
 
 .activity-card::before {
@@ -166,12 +166,12 @@ body {
     width: 100%;
     height: 7px;
 
-    /* 兩張卡片完全相同 */
+    /* 珊瑚橘 → 陶土橘 */
     background:
         linear-gradient(
             90deg,
-            #4f8fa3,
-            #356a7c
+            #e98b68,
+            #c96445
         );
 }
 
@@ -184,7 +184,7 @@ body {
     transform: translateY(-7px);
 
     box-shadow:
-        0 18px 38px rgba(38, 75, 91, 0.16);
+        0 18px 38px rgba(166, 91, 61, 0.16);
 }
 
 
@@ -197,14 +197,14 @@ body {
 
     padding: 7px 18px;
 
-    /* 膠囊形狀 */
+    /* 膠囊造型 */
     border-radius: 50px;
 
-    /* 淡霧藍背景 */
-    background-color: #e3f0f3;
+    /* 淡橘背景 */
+    background-color: #fbe5dc;
 
-    /* 深藍綠文字 */
-    color: #356a7c;
+    /* 深陶土橘文字 */
+    color: #a84f35;
 
     font-size: 15px;
     font-weight: 700;
@@ -250,7 +250,7 @@ body {
 ========================= */
 
 .activity-description {
-    color: #66747a;
+    color: #6d625e;
 
     font-size: 16px;
 
@@ -272,12 +272,12 @@ body {
 
     padding: 14px 25px;
 
-    /* 和卡片頂部相同的藍綠色 */
+    /* 珊瑚橘 → 陶土橘 */
     background:
         linear-gradient(
             90deg,
-            #4f8fa3,
-            #356a7c
+            #e98b68,
+            #c96445
         );
 
     color: #ffffff;
@@ -291,14 +291,13 @@ body {
     border-radius: 50px;
 
     /*
-       自動推到卡片底部
-       即使左右文字長度不同
-       兩顆按鈕仍然可以對齊
+       自動將按鈕推到卡片底部
+       左右兩顆按鈕會保持對齊
     */
     margin-top: auto;
 
     box-shadow:
-        0 5px 14px rgba(53, 106, 124, 0.22);
+        0 5px 14px rgba(169, 79, 53, 0.22);
 
     transition:
         transform 0.25s ease,
@@ -315,7 +314,7 @@ body {
     transform: translateY(-3px);
 
     box-shadow:
-        0 8px 20px rgba(53, 106, 124, 0.28);
+        0 8px 20px rgba(169, 79, 53, 0.28);
 
     filter: brightness(1.07);
 }
@@ -426,7 +425,7 @@ footer {
 
 
     /* =========================
-       手機副標題
+       手機活動副標題
     ========================= */
 
     .activity-card h3 {
