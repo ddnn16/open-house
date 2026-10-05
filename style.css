@@ -1,0 +1,366 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+    background-color: #FDF5E6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   網頁主要容器
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+
+/* =========================
+   Hero / 活動主視覺
+========================= */
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+
+    height: auto;
+
+    margin: 0 auto 25px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   活動資訊
+========================= */
+
+.event-info {
+    font-size: 18px;
+    color: #555555;
+}
+
+.event-info p {
+    margin: 5px 0;
+}
+
+.event-date {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+}
+
+
+/* =========================
+   報名區域
+========================= */
+
+.registration {
+    text-align: center;
+}
+
+.registration h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.registration-description {
+    color: #777777;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   活動卡片排列
+========================= */
+
+.activity-list {
+    display: flex;
+
+    /* 兩張卡片中間的距離 */
+    gap: 30px;
+
+    /* 讓兩張卡片一樣高 */
+    align-items: stretch;
+
+    width: 100%;
+}
+
+
+/* =========================
+   活動卡片
+========================= */
+
+.activity-card {
+    background-color: #ffffff;
+
+    /* 兩張卡片平均分配空間 */
+    flex: 1;
+
+    /* 讓內容可以垂直排列 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e5e5;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* 滑鼠移到卡片上的效果 */
+
+.activity-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   身分標籤
+========================= */
+
+.tag {
+    display: inline-block;
+
+    background-color: #f1f1f1;
+    color: #555555;
+
+    padding: 6px 16px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   活動名稱
+========================= */
+
+.activity-card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.activity-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   活動說明
+========================= */
+
+.activity-description {
+    color: #666666;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   報名按鈕
+========================= */
+
+.register-button {
+    display: inline-block;
+
+    min-width: 200px;
+
+    padding: 14px 35px;
+
+    background-color: #333333;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    /*
+       讓按鈕自動推到卡片底部。
+       即使左右兩邊文字長度不同，
+       按鈕也可以保持對齊。
+    */
+    margin-top: auto;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.register-button:hover {
+    background-color: #555555;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px 20px;
+
+    background-color: #FDF5E6;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   手機版 RWD
+   600px 以下
+========================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       網頁容器
+    ------------------------- */
+
+    .container {
+        padding: 25px 15px 40px;
+    }
+
+
+    /* -------------------------
+       主視覺
+    ------------------------- */
+
+    .hero {
+        margin-bottom: 35px;
+    }
+
+    .hero-image {
+        margin-bottom: 20px;
+    }
+
+
+    /* -------------------------
+       日期資訊
+    ------------------------- */
+
+    .event-date {
+        font-size: 20px;
+    }
+
+    .event-info {
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       報名區標題
+    ------------------------- */
+
+    .registration h1 {
+        font-size: 25px;
+    }
+
+    .registration-description {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+
+    /* -------------------------
+       手機改成上下排列
+    ------------------------- */
+
+    .activity-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    /* -------------------------
+       活動卡片
+    ------------------------- */
+
+    .activity-card {
+        width: 100%;
+
+        padding: 30px 20px;
+
+        border-radius: 12px;
+    }
+
+    .activity-card h2 {
+        font-size: 21px;
+    }
+
+    .activity-card h3 {
+        font-size: 18px;
+    }
+
+
+    /* -------------------------
+       手機上的按鈕放大
+    ------------------------- */
+
+    .register-button {
+        display: block;
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 15px 20px;
+
+        font-size: 18px;
+
+        margin-top: auto;
+    }
+
+}
